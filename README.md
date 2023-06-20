@@ -38,3 +38,83 @@
 
 #### 4.将数据显示出来
 
+## I. Purpose
+
+
+
+Realize micro-blog monitoring, monitoring a user's micro-blog dynamics
+
+
+
+
+
+
+
+## two. Success criteria
+
+
+
+When users post microblog, they can successfully capture it and display it on the big screen.
+
+
+
+
+
+
+
+## III. Project function
+
+
+
+On the large screen, you can see the keywords that detect the most users, the real-time dynamic time, the number of detected users' fans, the number of historical detected microblogs, and the publishing location
+
+
+
+
+
+
+
+Iv. Technical requirements
+
+
+
+(Static crawl first, then dynamic crawl)
+
+
+
+### function:
+
+
+
+#### 1. Get the user's Weibo response
+
+
+
+
+
+
+
+#### 2. Get the user's micro-blog information
+
+
+
+(User name, number of followers, UID, type, work email)
+
+
+
+
+
+
+
+#### 3. Save the user's microblog information in the database
+
+
+
+
+
+
+
+#### 4. Display the data
+
+ 
+
