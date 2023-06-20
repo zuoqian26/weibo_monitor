@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理页面</title>
+    <link rel="stylesheet" href="../static/css/user.css">
+    <script src="../static/js/echarts.min.js"></script>
+  </head>
+<body>
+<!-- 主面板标题文字 -->
+<div class="title">
+  <span>微博监控主面板</span>
+  <span class="showTime">2020年3月17-0时54分14秒</span>
+  <!-- 监控到的微博数量 -->
+  <div id="weibocounts">
+    <div class="counts">
+      <span>目前共监控到： {{ datas.count }}</span>
+    </div>
+  </div>
+  <form id="updatawb">
+    <input type="button" value="更新">
+  </form>
+  
+</div>
+
+<!-- 搜索设置 -->
+<div class="directory">
+  <form method="post">
+    <input type="text" id="name" name="uid" placeholder="输入ID">
+    <input type="submit" value="添加用户">
+  </form>
+</div>
+
+<!-- 目录设置 -->
+<div class="divdir">
+  <div class="user">
+    <a href="/weibo/">监控用户</a>
+  </div>
+</div>
+
+<!-- 数据面板 -->
+<div class="data">
+  <!-- 历史发布地点 -->
+  <div id="historyloca">
+    <div id="locapies" ></div>
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('locapies'));
+
+      // 指定图表的配置项和数据
+      var option = {
+                title: {
+                    text: 'loca',
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                    type: 'shadow'
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '1%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    boundaryGap: [0, 0.01]
+                },
+                yAxis: {
+                    type: 'category',
+                    data: {{ datas.loca_[1]|tojson }}
+                },
+                series: [
+                    {
+                    name: '次数',
+                    type: 'bar',
+                    data: {{ datas.loca_[0] }}
+                    },
+                ]
+                };
+
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+  </div>
+  <!-- 粉丝数量排行前五 -->
+  <div id="follwersranking">
+    <p>粉丝数量排行前五</p>
+    <ul>
+      <li>{{ datas.followrank[0][0] }}：约{{ datas.followrank[1][0] }}关注</li>
+      <li>{{ datas.followrank[0][1] }}：约{{ datas.followrank[1][1] }}关注</li>
+      <li>{{ datas.followrank[0][2] }}：约{{ datas.followrank[1][2] }}关注</li>
+      <li>{{ datas.followrank[0][3] }}：约{{ datas.followrank[1][3] }}关注</li>
+      <li>{{ datas.followrank[0][4] }}：约{{ datas.followrank[1][4] }}关注</li>
+    </ul>
+  </div>
+  <!-- 监控到微博数量排行前五 -->
+  <div id="weiboranking">
+    <p>监控到微博数量排行前五</p>
+    <ul>
+      <li>{{ datas.weiborank[0][0] }}：{{ datas.weiborank[1][0] }}个</li>
+      <li>{{ datas.weiborank[0][1] }}：{{ datas.weiborank[1][1] }}个</li>
+      <li>{{ datas.weiborank[0][2] }}：{{ datas.weiborank[1][2] }}个</li>
+      <li>{{ datas.weiborank[0][3] }}：{{ datas.weiborank[1][3] }}个</li>
+      <li>{{ datas.weiborank[0][4] }}：{{ datas.weiborank[1][4] }}个</li>
+    </ul>
+  </div>
+  <!-- 关键词 词云-->
+  <div id="keyword">
+      <img src="../static/img/word.png" alt="">
+  </div>
+</div>
+<div id="histocaltime"></div>
+</body>
+</html>
+<script src="../static/js/time.js"></script>
+
