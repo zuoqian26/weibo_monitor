@@ -1,0 +1,205 @@
+body{
+    /* position: absolute; */
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    z-index: 680;
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    background-color: #1670ca;
+}
+
+/* 主面板标题文字 */
+.title > span:nth-child(1){
+    position: relative;
+    font-size: 40px;
+    color: blue;
+    background-color: #1E90FF;
+    border: 1px solid #1E90FF;
+    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+}
+/* 更新按键 */
+.title > #updatawb{
+    position: absolute;
+    margin-left: 95%;
+    margin-top: 2%;
+}
+
+/* 时间 */
+.title > span:nth-child(2){
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 800px;
+}
+
+/* 搜索设置 */
+.directory{
+    position: absolute;
+    margin-top: 120px;
+    width: 100%;
+}
+.directory > form{
+    width: 300px;
+    height: 24px;
+    margin-left: 80%;
+    margin-top: 5px;
+}
+
+/* 目录设置 */
+.divdir{
+    position: absolute;
+    z-index: 700;
+    background-color: white;
+    margin-top: 0%;
+    margin-left: 20px;
+    width: 200px;
+    height: 620px;
+    margin-top: 90px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 1px black;
+}
+
+/* 数据面板 */
+.data{
+    position: absolute;
+    background-color: white;
+    height: 550px;
+    width: 1300px;
+    margin-top: 160px;
+    margin-left: 240px;
+    border: 1px solid rgb(74, 74, 154);
+    box-shadow: 1px 1px 1px blue;
+    border-radius: 10px;
+}
+/* 监控到的微博数量 */
+#weibocounts{
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 500px;
+    margin-top: 10px;
+    margin-left: 500px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 10px;
+}
+/* 历史发布地点 */
+#historyloca{
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 500px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 10px;
+}
+/* 粉丝数量排行前五 */
+#follwersranking{
+    background-color: white;
+    height: 240px;
+    width: 250px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 1000px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 10px;
+}
+/* 监控到微博数量排行前五 */
+#weiboranking{
+    background-color: white;
+    height: 240px;
+    width: 250px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1000px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 10px;
+}
+/* 关键词 */
+#keyword{
+    position: relative;
+    height: 500px;
+    width: 700px;
+    background-color: white;
+    left: 250px;
+    bottom: 240px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.user{
+    position: relative;
+    /* width: 120px; */
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 20px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 20px;
+}
+.user > a{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.counts > span{
+    position: absolute;
+    font-weight: bold;
+    font-size: 25px;
+    top: 10px;
+    margin-left: 6px;
+    color: blue;
+}
+
+
+.counts > p{
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+#follwersranking > p{
+    font-size: 25px;
+    margin-left: 20px;
+    color: blue;
+    font-weight: bold;
+}
+
+#follwersranking > ul{
+    background-color: white;
+    margin-top: 40px;
+    color: blue;
+}
+
+#weiboranking > p{
+    font-size: 20px;
+    margin-left: 20px;
+    color: blue;
+    font-weight: bold;
+}
+
+#weiboranking > ul{
+    background-color: white;
+    margin-top: 40px;
+    color: blue;
+}
+
+#locapies{
+    width: 200px;
+    height: 500px;
+}
