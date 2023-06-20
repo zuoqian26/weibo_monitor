@@ -1,3 +1,4 @@
+1.0版本是我第一个项目，结构未成形，启动需要安装很多东西（配置flask和python，还要提前创建好数据库，然后就是右键运行即可）
 ## 一.目的
 
 实现微博监控，监控某用户的微博动态
@@ -37,6 +38,9 @@
 
 
 #### 4.将数据显示出来
+
+
+Version 1.0 is my first project, the structure is not formed, startup needs to install a lot of things (configure flask and python, but also create a good database in advance, and then just right-click to run)
 
 ## I. Purpose
 
